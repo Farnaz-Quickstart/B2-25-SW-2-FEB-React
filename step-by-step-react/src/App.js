@@ -11,11 +11,6 @@ import FormSingleState from './component/FormSingleState';
 function App() {
   return (
     <>
-      <Greeting />
-      <GreetingWithState />
-      <GreetingWithStyle />
-      <PropsNoDestructing name="Ali" />
-      <PropsWithDestructing name="Farnaz" />
       <FormSingleState />
     </>
   );

@@ -8,12 +8,15 @@ export default function FormSingleState() {
   })
 
   function handleChange (event) {
+
     const {name, value} = event.target;
-    setFormState({})
+    console.log (name, value)
+    setFormState((prevData)=>({
+      ...prevData, [name]:value}))
   }
 
   function handleClick() {
-    
+    console.log (formState)
   }
 
   return (
@@ -25,12 +28,12 @@ export default function FormSingleState() {
       
       <label>
         LastName: 
-        <input type="text" name="lastName"   />
+        <input type="text" name="lastName" onChange={handleChange}   />
       </label><br/>
       
       <label>
         Email: 
-        <input type="text" name="email"     />
+        <input type="text" name="email" onChange={handleChange}   />
       </label><br/>
       
       <input type="button" onClick={handleClick} value="SUBMIT"></input>

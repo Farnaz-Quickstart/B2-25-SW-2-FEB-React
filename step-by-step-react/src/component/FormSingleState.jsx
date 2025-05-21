@@ -23,17 +23,17 @@ export default function FormSingleState() {
     <>
       <h3>Welcome to our class</h3>
       <label htmlFor="">FirstName: 
-        <input type="text" name="firstName" onChange={handleChange}  />
+        <input type="text" name="firstName" value={FormData.firstName} onChange={handleChange}  />
       </label><br/>
       
       <label>
         LastName: 
-        <input type="text" name="lastName" onChange={handleChange}   />
+        <input type="text" name="lastName" value={FormData.lastName} onChange={handleChange}   />
       </label><br/>
       
       <label>
         Email: 
-        <input type="text" name="email" onChange={handleChange}   />
+        <input type="text" name="email" value={FormData.email} onChange={handleChange}   />
       </label><br/>
       
       <input type="button" onClick={handleClick} value="SUBMIT"></input>

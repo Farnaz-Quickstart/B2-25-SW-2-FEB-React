@@ -17,7 +17,7 @@ import React, {useState} from 'react'
     <>
       <h1>User Registration Form</h1>
       <label>FirstName:
-        <input type="text" name="firstName" onChange={(e)=>setFirstNameState(e.target.value)} ></input>
+        <input type="text" name="firstName" onChange={(event)=>setFirstNameState(event.target.value)} ></input>
       </label>
       <button >SUBMIT</button>
 

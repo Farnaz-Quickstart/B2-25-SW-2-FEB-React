@@ -1,40 +1,32 @@
 import React, {useState} from 'react'
 
-function FormMultiState() {
-  const [firstNameState, setFirstNameState] = useState("")
-  const [lastNameState, setLastNameState] = useState("")
-  const [emailState, setEmail] = useState("")
+ function FormMultiState() {
 
-  function handleChange(event) {
-    setFirstNameState(event.target.value)
-  }
+    // Defining firstName state with default value of Joshua
+    const [firstNameState, setFirstNameState] = useState ("Tom")
+    const [lastNameState, setLastNameState] = useState("Towhidi")
 
-  function handleClick() {
-    console.log (firstNameState, lastNameState, emailState)
+    console.log (firstNameState)
+    console.log (lastNameState)
 
+  function handleChange (event) {
+    console.log (event)
   }
 
   return (
     <>
-      <h3>Welcome to our class</h3>
-      <label htmlFor="">FirstName: 
-        <input type="text" name="firstName" onChange={(e)=>setFirstNameState(e.target.value)}  />
-      </label><br/>
-      
-      <label>
-        LastName: 
-        <input type="text" name="lastName" onChange={(e)=>setLastNameState(e.target.value)}  />
-      </label><br/>
-      
-      <label>
-        Email: 
-        <input type="text" name="email" onChange={(e)=>setEmail(e.target.value)}    />
-      </label><br/>
-      
-      <input type="button" onClick={handleClick} value="SUBMIT"></input>
+      <h1>User Registration Form</h1>
+      <label>FirstName:
+        <input type="text" name="firstName" onChange={(e)=>setFirstNameState(e.target.value)} ></input>
+      </label>
+      <button >SUBMIT</button>
+
+      <label>LastName:
+        <input type="text" name="lastName" onChange={handleChange} ></input>
+      </label>
+      <button >SUBMIT</button>
     </>
   )
 }
-
 
 export default FormMultiState;

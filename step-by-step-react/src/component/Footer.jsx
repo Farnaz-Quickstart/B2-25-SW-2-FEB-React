@@ -1,9 +1,7 @@
 import React from 'react'
 
-function Footer(props) {
+export default function Footer() {
   return (
-    <div>All right reserved {props.year} by Quickstart</div>
+    <p>© 2025 MyShop</p>
   )
 }
-
-export default Footer;

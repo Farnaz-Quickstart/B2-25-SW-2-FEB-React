@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Button from 'react-bootstrap/Button';
 
-export default function FormSingleState() {
+export default function FormSingleState({students,setStudents}) {
   const [formState, setFormState] = useState({
     firstName : "",
     lastName : "" ,
@@ -16,12 +16,12 @@ export default function FormSingleState() {
 
   function handleClick() {
     console.log (formState)
+    setStudents ([...students, formState])
   }
 
   return (
     <>
       <h3>Welcome to our class</h3>
-      <Button variant="success">ALL Students</Button>
 
       <label htmlFor="">FirstName: 
         <input type="text" name="firstName" onChange={handleChange} />

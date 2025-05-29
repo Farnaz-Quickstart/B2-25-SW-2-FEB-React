@@ -1,17 +1,18 @@
 import React, {useState} from 'react'
 
-export default function FormSingleState() {
+export default function FormSingleState({ students,setStudents}) {
 
   const [formData, setFormData] = useState({
-    firstNameStudent:"",
-    lastNameStudent: "" ,
-    telStudent: "506-999-9999"
+    firstName:"",
+    lastName: "" ,
+    tel: "506-999-9999"
   })
 
+  console.log (students)
   function handleChange (event) {
-    console.log (event.target)
-    console.log (event.target.name)
-    console.log (event.target.value)
+    // console.log (event.target)
+    // console.log (event.target.name)
+    // console.log (event.target.value)
     const {name, value } = event.target
     setFormData ({...formData, [name]:value})
 
@@ -19,21 +20,22 @@ export default function FormSingleState() {
 
   function handleSubmit () {
     console.log (formData)
+    setStudents ([...students, formData])
   }
 
   return (
     <>
       <h1>User Registration Form</h1>
-      <label>FirstNameeeeee:
-        <input type="text" name="firstNameStudent" onChange={handleChange} ></input>
-      </label>
+      <label>FirstName:
+        <input type="text" name="firstName" onChange={handleChange} ></input>
+      </label><br/>
 
       <label>LastName:
-        <input type="text" name="lastNameStudent" onChange={handleChange} ></input>
-      </label>
+        <input type="text" name="lastName" onChange={handleChange} ></input>
+      </label><br/>
 
       <label>Tel:
-        <input type="text" name="telStudent" onChange={handleChange} ></input>
+        <input type="text" name="tel" onChange={handleChange} ></input>
       </label>
 
       <button onClick={handleSubmit} >SUBMIT</button>

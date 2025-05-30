@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
- function FormMultiState() {
+ function RegistrationMultiState() {
 
     // Defining firstName state with default value of Joshua
   const [firstNameState, setFirstNameState] = useState ("Tom")
@@ -51,4 +51,4 @@ import React, {useState} from 'react'
   )
 }
 
-export default FormMultiState;
+export default RegistrationMultiState;

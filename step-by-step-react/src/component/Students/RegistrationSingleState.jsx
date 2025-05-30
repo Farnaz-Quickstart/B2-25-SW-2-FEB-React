@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function FormSingleState({ students,setStudents}) {
+export default function RegistrationSingleState({ students,setStudents}) {
 
   const [formData, setFormData] = useState({
     firstName:"",

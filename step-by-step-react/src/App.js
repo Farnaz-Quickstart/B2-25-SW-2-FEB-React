@@ -1,10 +1,9 @@
 import './App.css';
 import React, {useState} from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from './component/Header'
-import Footer from './component/Footer'
-import ListStudents from './component/ListStudents'
-import FormSingleState from './component/FormSingleState'
+import ContactPage from './component/Pages/ContactPage'
+import HomePage from './component/Pages/HomePage'
 
 
 function App() {
@@ -35,12 +34,12 @@ function App() {
 
 
   return (
-    <>
-      <Header />
-      <FormSingleState students={students} setStudents={setStudents} />
-      <ListStudents students={students} />
-      <Footer />  
-    </>
+    <BrowserRouter>
+      <Routes>
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/home" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
